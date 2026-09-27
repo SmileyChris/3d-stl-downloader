@@ -4,11 +4,11 @@ Browser extension that saves the model shown in the [Tripo3D](https://studio.tri
 
 ## Install
 
-**Chrome / Edge / Brave:** unzip the `.zip` from the latest [release](../../releases/latest), then `chrome://extensions` → enable Developer mode → **Load unpacked** → pick the unzipped folder (or `extension/` from a clone).
+**Chrome / Edge / Brave:** unzip `3d-stl-downloader-<version>-chrome.zip` from the latest [release](../../releases/latest), then `chrome://extensions` → enable Developer mode → **Load unpacked** → pick the unzipped folder (or `extension/` from a clone).
 
-**Firefox (140+):** `about:addons` → gear → **Install Add-on From File…** → pick the signed `.xpi` from the latest [release](../../releases/latest). For quick testing without signing: `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on** → `extension/manifest.json` (removed on restart).
+**Firefox (140+):** `about:addons` → gear → **Install Add-on From File…** → pick `3d-stl-downloader-<version>-firefox.xpi` from the latest [release](../../releases/latest). For quick testing without signing: `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on** → `extension/manifest.json` (removed on restart).
 
-To sign a new build (unlisted, via addons.mozilla.org): bump `version` in `extension/manifest.json`, then run `npx web-ext sign` (Firefox `.xpi`) and `npx web-ext build` (Chrome `.zip`), and attach both from `web-ext-artifacts/` to a GitHub release. Settings come from `web-ext-config.mjs`; AMO API keys from `~/.web-ext-config.mjs` (`sign.apiKey` / `sign.apiSecret`).
+To sign a new build (unlisted, via addons.mozilla.org): bump `version` in `extension/manifest.json`, then run `npx web-ext sign` (Firefox `.xpi`) and `npx web-ext build` (Chrome `.zip`), and attach both from `web-ext-artifacts/` to a GitHub release, renamed to `3d-stl-downloader-<version>-firefox.xpi` and `3d-stl-downloader-<version>-chrome.zip`. Settings come from `web-ext-config.mjs`; AMO API keys from `~/.web-ext-config.mjs` (`sign.apiKey` / `sign.apiSecret`).
 
 After editing the code, hit reload on the extension and refresh the site's tab.
 
