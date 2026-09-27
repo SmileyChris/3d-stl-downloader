@@ -1,0 +1,5 @@
+# Signed builds are attached to GitHub Releases, not committed.
+web-ext-artifacts/
+extension/.amo-upload-uuid
+icon-source.png
+node_modules/
