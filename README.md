@@ -1,3 +1,5 @@
+<img src="extension/icon-128.png" width="96" alt="">
+
 # 3D STL Downloader
 
 Browser extension that saves the model shown in the [Tripo3D](https://studio.tripo3d.ai) or [Meshy](https://www.meshy.ai) 3D preview as a binary STL, straight from the page's three.js scene. No API calls, no credits: it writes out exactly the geometry the viewer is rendering.
