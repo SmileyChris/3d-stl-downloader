@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "3D STL Downloader",
+  "version": "0.2.2",
+  "description": "Exports the model shown in the Tripo3D or Meshy three.js preview as a binary STL.",
+  "permissions": [
+    "scripting"
+  ],
+  "action": {
+    "default_title": "Download STL from 3D preview",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://studio.tripo3d.ai/*",
+        "https://www.meshy.ai/*",
+        "https://meshy.ai/*"
+      ],
+      "js": [
+        "stl.js",
+        "hook.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "host_permissions": [
+    "https://studio.tripo3d.ai/*",
+    "https://www.meshy.ai/*",
+    "https://meshy.ai/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "3d-stl-downloader@tactful.co.nz",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}
